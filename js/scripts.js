@@ -1,7 +1,7 @@
 let pokemonList = [
-  { name: "bulbasaur", height: 7, type: ["grass"] },
-  { name: "Charmeleon", height: 1.1, type: ["fire"] },
-  { name: "squirtle", height: 0.5, type: ["water"] }
+  { name: "bulbasaur", height: .6, type: ["grass"] },
+  { name: "Charmeleon", height: .6, type: ["fire"] },
+  { name: "squirtle", height: 0.7, type: ["water"] }
 ];
 //this is an edit commit//
 
