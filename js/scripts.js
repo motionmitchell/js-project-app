@@ -7,11 +7,8 @@ let pokemonRepository= (function(){
   
   //1.5 update up//
 
-let pokemonList = [
-  { name: "bulbasaur", height: .6, type: ["grass"] },
-  { name: "Charmeleon", height: .6, type: ["fire"] },
-  { name: "squirtle", height: 0.7, type: ["water"] }
-];
+  pokemonList =[];
+  let apiUrl= 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //This is the newst code for 1.5 down//
 
 function add(item){
