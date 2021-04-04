@@ -1,13 +1,13 @@
 //1.5 update down//
 
 let pokemonRepository= (function(){
-  let pokemonList = [];
-
-  let pokemon = "";
-  
   //1.5 update up//
 
-  pokemonList =[];
+  let pokemonList = [
+    { name: "bulbasaur", height: .6, type: ["grass"] },
+    { name: "Charmeleon", height: .6, type: ["fire"] },
+    { name: "squirtle", height: 0.7, type: ["water"] }
+  ];
   let apiUrl= 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //This is the newst code for 1.5 down//
 
