@@ -6,7 +6,7 @@ let pokemonRepository= (function(){
   let pokemonList = [
     { name: "bulbasaur", height: .6, type: ["grass"] },
     { name: "Charmeleon", height: .6, type: ["fire"] },
-    { name: "squirtle", height: 0.7, type: ["water"] }
+    { name: "squirtle", height: 0.7, type: ["water"] },
   ];
   let apiUrl= 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //This is the newst code for 1.5 down//
@@ -26,7 +26,7 @@ function addListItem(pokemon){
   let listItem = document.createElement("li")
    let button = document.createElement("button");
     button.innerText= pokemon.name ;
-    button.classList.add(".button-class")
+    button.classList.add("button-class")
    listPokemon.appendChild(listItem);
    listItem.appendChild(button);
 
@@ -46,19 +46,10 @@ return {
 
 })();
 
-function findWater(user){
-if(user.type === "water"){
-  return user
-}
-}
 
 
 pokemonRepository.getAll().forEach(function(pokemon){
 pokemonRepository.addListItem(pokemon);
 });
-
-
-let dragons=pokemonRepository.getAll().filter(findWater);
-
 
 //Newest code for 1.5 up//
