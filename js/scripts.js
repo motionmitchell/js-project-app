@@ -1,7 +1,4 @@
-//1.5 update down//
-
 let pokemonRepository= (function(){
-  //1.5 update up//
 
   let pokemonList = [
     { name: "bulbasaur", height: .6, type: ["grass"] },
@@ -46,10 +43,21 @@ return {
 
 })();
 
-
-
 pokemonRepository.getAll().forEach(function(pokemon){
 pokemonRepository.addListItem(pokemon);
 });
 
 //Newest code for 1.5 up//
+
+  // Shows information about the consulted Pokémon (Console)
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  // Minimum keys required to add a new Pokémon to the Pokédex
+  let keyRequired = {
+    name: '',
+    types: ['', ''],
+    evolutions: '',
+    description: '',
+  };
