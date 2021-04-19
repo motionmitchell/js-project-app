@@ -64,31 +64,34 @@ let pokemonRepository = (function () {
       });
   }
 
+  //   //get the modal
+  let modal = document.getElementById("myModal");
+  console.log(modal);
+  let span = document.getElementsByClassName("close")[0];
+  console.log(span);
+  let pokemonModalName = document.getElementsByClassName("pokemon-name")[0];
+  let pokemonModalImage = document.getElementsByClassName("pokemon-image")[0];
+  let pokemonModalHeight = document.getElementsByClassName("pokemon-height")[0];
+  console.log(pokemonModalName);
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // window.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     modal.style.display = "none";
+  //   }
+  // }
+
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       console.log(pokemon);
+      modal.style.display = "block";
+      pokemonModalName.innerText = pokemon.name;
+      pokemonModalHeight.innerText = pokemon.height;
+      pokemonModalImage.src = pokemon.imageUrl;
     });
   }
-
-  //get the modal
-  let modal = document.getElementById("mymodal");
-
-  let span = document.getElementsByClassName("close"){0};
-
-  modal.style.display = "block";
-
-  span.onclick = function() {
-modal.style.display = "none";
-  }
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
 
   return {
     add: add,
