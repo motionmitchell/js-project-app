@@ -23,9 +23,6 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
   }
-  function showDetails(pokemon) {
-    console.log(pokemon.name);
-  }
 
   function loadList() {
     return fetch(apiUrl)
@@ -72,6 +69,27 @@ let pokemonRepository = (function () {
       console.log(pokemon);
     });
   }
+
+  //get the modal
+  let modal = document.getElementById("mymodal");
+
+  let span = document.getElementsByClassName("close"){0};
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+modal.style.display = "none";
+  }
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
   return {
     add: add,
     getAll: getAll,
