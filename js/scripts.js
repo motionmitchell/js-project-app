@@ -81,11 +81,15 @@ let pokemonRepository = (function () {
   console.log(modal);
   let span = document.getElementsByClassName("btn-close")[0];
   console.log(span);
+  let modalButtonClose = document.querySelector("#close-modal-button");
   let pokemonModalName = document.getElementsByClassName("modal-title")[0];
   let pokemonModalImage = document.getElementsByClassName("modal-image")[0];
   let pokemonModalHeight = document.getElementById("modal-content");
   console.log(pokemonModalName);
   span.onclick = function () {
+    modal.style.display = "none";
+  };
+  modalButtonClose.onclick = function () {
     modal.style.display = "none";
   };
 
